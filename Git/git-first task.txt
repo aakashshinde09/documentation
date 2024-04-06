@@ -1,0 +1,280 @@
+1]what is software? and types
+
+Software is a set of instructions, data or programs used to operate computers and execute specific tasks.
+                                  or
+Software is a set of programs (sequence of instructions) that allows the users to perform a well-defined function or some specified task.
+ 
+two  types of software==1]system software
+                      ==2]application software
+------------------------------------------------------------------------------------------------------------------------------------------
+
+2] what is API
+
+An API, or application programming interface, is a set of rules or protocols that let software applications communicate with each other to exchange data, features and functionality.
+
+types of API's
+
+Open APIs ==> open source application programming interfaces you can access with the HTTP protocol. Also known as public APIs, they have defined API endpoints and request and response formats.
+ 
+
+Partner APIs==> connect strategic business partners. Typically, developers access these APIs in self-service mode through a public API developer portal. Still, they need to complete an onboarding process and get login credentials to access partner APIs.
+
+Internal APIs==> remain hidden from external users. These private APIs aren't available for users outside of the company and are instead intended to improve productivity and communication across different internal development teams.
+ 
+
+Composite APIs==> combine multiple data or service APIs. They allow programmers to access several endpoints in a single call. Composite APIs are useful in microservices architecture where performing a single task may require information from several sources.
+
+
+USE CASES OF API:-
+
+1]Mapping apps
+
+2]Travel booking comparisons
+
+3]Universal logins
+
+4]web API
+
+5] Remote API
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+AGILE
+
+
+What is the Agile methodology?
+Agile methodology is a project management framework that breaks projects down into several dynamic phases, commonly known as sprints. 
+
+It focuses on delivering smaller pieces of work regularly instead of one big launch.
+
+
+This allows teams to adapt to changes quickly and provide customer value faster.
+
+
+They prioritize flexibility, collaboration, and customer satisfaction.
+
+AGILE STAGES==
+
+1. Requirement Gathering
+
+2. Design
+
+3.Development (Coding)
+
+4.Testing
+
+5.Deployment
+
+6. Review (Maintenance)
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+DEVOPS
+
+what is devops
+
+--devops is cultural ,to improve efficiency of process.
+     or
+DevOps is a set of practices that combines software development and information-technology operations which aims to shorten the systems development life cycle and provide continuous delivery with high software quality.
+
+
+Since DevOps is more of a cross-functional mode of working, people working under this culture prefer using a DevOps toolset as a toolchain that performs the following functions:
+
+Coding – code development and review, source code management tools, code merging
+Building – continuous integration tools, build status
+Testing – continuous testing tools that provide quick and timely feedback on business risks
+Packaging – artifact repository, application pre-deployment staging
+Releasing – change management, release approvals, release automation
+Configuring – infrastructure configuration and management, infrastructure as code tools
+Monitoring – applications performance monitoring.
+
+
+diiferent types of devops tools
+
+1.code--git, github,gitlab,visual code,bitbucket
+
+2.build -- maven,gradle ,sonatype nexus
+
+3.test -- azure,selenium
+
+4.release -- openstack,jenkins,bamboo
+
+5.operate --kubernates,ansible,chef
+
+6.deploy -- aws, docker,puppet
+
+7.moniter -- grafana,cloudwatch,greaylog
+
+
+
+Benefits of DevOps
+
+1.Continuous delivery of software
+
+2.Better collaboration between teams
+
+3.Easy deployment
+
+4.Better efficiency and scalability
+
+5.Errors are fixed at the initial stage
+
+6.More security
+
+7.Less manual intervention (which means fewer chances of error)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+******************************************************************************************************************************************************************************************
+
+
+GIT
+
+ 1] what is git ??
+
+Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
+
+Git is foundation of many services like GitHub and GitLab, but we can use Git without using any other Git services. Git can be used privately and publicly.
+
+Git was created by Linus Torvalds in 2005 to develop Linux Kernel. It is also used as an important distributed version-control tool for the DevOps.
+
+
+2] Why Use Git?
+
+Around 70% of developers worldwide use Git for development. Some of the prominent reasons for using Git are:
+
+a]Developers can work together from anywhere.
+b]Developers can see the full history and can compare the previous and new changes of the project.
+c]Developers can retreat to earlier versions of a project.
+
+3] what is github???
+A hosting service for Git repositories.
+It is a type of service.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+git task ( how to commit,push,pull from github)
+
+
+1.launch 2 insatnce. 
+
+2. connect the instance and make directory
+
+3.install the git package using ---" yum install git -y"
+
+4.Initialize Git--- " git init"
+
+5.configure git -- " git config --global user.name "namratapowar"
+                   "git config  --global user.email "namratapowar@gmail.com"
+
+6.go inside the directories and adding file-- git add. (file name) and put data using vim editor
+
+7.check git status ---"git status" When you first add files to an empty repository, they are all untracked. To get Git to track them, you need to stage them, or add them to the staging environment.
+
+8.As you are working, you may be adding, editing and removing files. But whenever you hit a milestone or finish a part of the work, you should add the files to a Staging Environment.
+
+Staged files are files that are ready to be committed to the repository you are working on. 
+
+9.git commit- move from stage to commit for our repo.using command --- "git commit -m "for login "
+
+10."git remote add origin <url of github repository>"
+
+11. push data local repo to cental repo using github account --- "git push -u origin mater"
+
+
+now open to browser and open  github account 
+
+1.create a repository
+
+2.choose http and copy url == https://https://github.com/namratapowar15/repo
+
+3Push Local Repository to GitHub
+
+4.git remote add origin URL specifies that you are adding a remote repository, with the specified URL, as an origin to your local Git repo.
+
+5.git push --set-upstream origin master
+
+6. go to github setting
+
+token genrate or ssh 
+
+first go to your repo and click on devloper setting choose option token and create token for http.then use url https://https://github.com/namratapowar15/repo
+
+another way to create using ssh== choose ssh and go to console use ssh-keygen command and two generate key first for private id_rsa and second ---public key id_rsa.pub
+
+go to inside  ~/.ssh then use cat id_rsa.pub and copy the key and paste github then generate ssh key.
+
+
+use command for ssh--- git remote add ssh-origin git@github.com:namratapowar15/new-repo.git
+
+                       git push --set-upstream ssh-origin master
+
+
+
+git pull ---git pull ssh-origin master ----the code is pulled in local repo as well and working space as well
+
+
+git log                                                    #checking the logs of commited files 
+
+git show "a2057d339802bfc"                                 #detailed info about commit  
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+**GIT fetch**
+
+The git fetch command retrieves commits, files, branches, and tags from a remote repository. 
+
+GIT FETCH COMMAND----git fetch ssh-origin master  
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+GIT branching
+
+What Is a Branch in Git?
+A branch in Git is a separate, safe, and isolated area of development that diverges from the main project.
+
+Branches allow developers to work on and test new features, fix bugs, experiment with new ideas and reduce the risk of breaking the stable code in the codebase.
+
+
+git branch                              #listing the all branches 
+
+git branch   newbranch                   #creating the new branch 
+
+git checkout newbranch                  #switching the new branch  
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Now Switch the branch and create file  
+touch file  
+git add .  
+git commit  -m  "new code is added"  ----We successfully created new branch and added seperate code 
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+git merge ---{merging branches in master branch }  
+ 
+swith to the master branch 
+git checkout  master  
+git merge <branch_name>   -----we successfully able to merge the master branch and newbranch  
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Now switch the branch and push your code in centralised server 
+
+pushing the newbranch  
+swith the branch  ----git checkout newbranch 
+git push origin <new_branch_name>  
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+

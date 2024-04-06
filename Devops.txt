@@ -1,0 +1,19 @@
+We keep saying that DevOps is a culture. But what does that mean?
+
+DevOps is a set of practices that combines software development and information-technology operations which aims to shorten the systems development life cycle and provide continuous delivery with high software quality.
+
+Here’s How you can do it:
+
+Since DevOps is more of a cross-functional mode of working, people working under this culture prefer using a DevOps toolset as a toolchain that performs the following functions:
+
+Coding – code development and review, source code management tools, code merging
+Building – continuous integration tools, build status
+Testing – continuous testing tools that provide quick and timely feedback on business risks
+Packaging – artifact repository, application pre-deployment staging
+Releasing – change management, release approvals, release automation
+Configuring – infrastructure configuration and management, infrastructure as code tools
+Monitoring – applications performance monitoring.
+
+DevOps is a set of practices, tools, and a cultural philosophy that emphasizes collaboration, communication, and automation between software development (Dev) and information technology operations (Ops) teams. Its aim is to shorten the system development lifecycle and deliver high-quality software faster and more reliably.
+
+
