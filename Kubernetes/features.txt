@@ -1,0 +1,110 @@
+
+
+working
+
+1. create the manifest file for k8s objects (yaml/json)
+2. apply these file to the cluster (to master) to bring into desired state
+3. pods run on node which is controlled by master
+
+
+roles of master
+
+kubernetes cluster runs on vms/baremetal/cloud or mix
+
+1. k8s having one or more master and one or more workers
+2. the master is now going to run set of k8s  process. These process with insuresmooth functioning of master these process are called control plane.
+3. can be multi master for high availability
+4. master runs control plane to run cluster smoothly
+
+components of master plane
+1. api server
+2. kube scheduler
+3. control manager
+4. ETCD (not part of k8s but without this k8s won't work to consider this also a part of k8s)
+
+
+1. api server
+* it interect directly with user
+* it meant to scale automatically according to load or request load
+* front end of control plane
+
+2. etcd
+* store metadata or status of cluster
+consistent and high availabiliy.
+store data in key value form
+
+
+
+features
+fully replicated entire state is available on every node of cluster
+secure implements tls with optional client certificate authentication 7
+fast bencbmark at 10,000 writes per second
+
+
+3. kube scheduler
+
+when user make a request for creation management of pods, it is going to take the action on his request
+if any mismatch occurs in number of pods runs then it will make them as desired no pods
+
+when we are not explicitly assign the node for pod creation then it will automatically decide the best node and create pod there. But if you want to create pod on specific node then assign node in the manifest file
+
+it take the hardware configuration information from etcd and that help to decide the best node for pod creation
+
+4. controller manager
+
+make sure actual state equal to desired state
+if k8s on cloud then cloud controller manager
+if k8s on non cloud kube-controller manager
+
+controller components
+
+Node controller for checking of nodes that has detect in cloud after it's stop responding
+route-controller responsible to setting  up newtork route
+service controller responsible for load balancing
+volume controller managing volumes
+
+Components of worker plane.
+
+
+components of worker plane
+1. kube proxy
+2. kubelet
+3. pods
+4. container engine
+
+
+1. kube proxy:
+a. it is responsible for networking and responsible to allocate the ip for pods
+b it's run on each node
+c. it's communicate to master via the API server
+
+2. kubelet
+a. agent running on node
+b. listen the k8s master (pod creation request)
+c. provide  pod information to etcd via api server
+d. use port 10255
+e. send success / faulure status to control plane
+
+3. pods 
+a. smallest unit of k8s
+b. one pod can contains multiple container but recommend only one container in one pod
+c. pod having it's ip address but contaier  don't have
+d. cluster has at least one master node and one worker node
+e. k8s cannot start container without pods
+f. auto scaling and auto healing by default not provide by pod for this high level k8s  object required
+g. pod crashed is also one more  limitation but fix this by high level objects.
+
+
+4. container engine
+a. work with kubelet.
+b. pulling image
+c. start/ stop container
+d. Expose port which is specified in manifest.
+
+
+Important Notes
+
+a. if we are using single cloud then command will use kubectl
+b. if we are using on premise then command will use kubeadm
+c. if we are using on hybrid/federated then command will use kubefed
+d. https://docs.aws/amazon.com/eks/latest/userguide/what-is-eks.html read this and now easily you can understand.
